@@ -6,36 +6,65 @@
 </head>
 <body>
     <form>
-        <label for="title">Title/Concept:</label>
-        <input type="text" id="title" required>
+        <label for="title">Title/ Main Concept:</label>
+        <input type="text" id="title" name="title" required>
 
+        <br>
 
+        <label for="subject">Subject:</label>
+        <select name="subject" id="subject">
+            {% for s in subjects %}
+                <option value="{{s}}">{{s}}</option>
+            {% endfor %}
+        </select>
+
+        <br>
+
+        <label for="concepts_learned">Concepts Learned</label>
+        <br>
+        <textarea id="concepts_learned" name="concepts_learned" rows="10" cols="50"></textarea>
+
+        <br>
+
+        <label for="reference_notes">Reference Notes</label>
+        <br>
+        <textarea id="reference_notes" name="reference_notes" rows="10" cols="50"></textarea>
+
+        <br>
+        <label for="key_takeaways">Key Takeaways</label>
+        <br>
+        <textarea id="key_takeaways" name="key_takeaways" rows="10" cols="50"></textarea>
+        <br>
+        <fieldset class="date">
+            <legend>Date</legend>
+            <select id="month" name="month">
+                {% for m in months %}
+                <option value="{{m}}">{{m}}</option>
+                {% endfor %}
+            </select>
+
+            <select id="day" name="day">
+                {% for i in range(1,32)%}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+            </select>
+
+            <select id="year" name="year">
+                {% for i in range(2026, 2037)%}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+            </select>
+       </fieldset>
 
         <button type="submit">Save Entry</button>
     </form>
 </body>
 </html>
 
-<!-- Concept / Title
-“e.g. Event Delegation in JS”
+<!-- TODO 1: ARIA / accessibility pass
 
-Topic
+TODO 2: Add placeholder text
 
-Python
+TODO 3: Backend wiring (Flask route + POST handling)
 
-JavaScript
-
-CSS
-
-Other
-
-What did I learn?
-(textarea)
-
-What confused me or took time to understand?
-(textarea)
-
-Why does this matter / when would I use it?
-(textarea, optional)
-
-Submit button: “Save entry” -->
+ -->

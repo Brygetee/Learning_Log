@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+.env/
+.env.*
+
+# Flask
+instance/
+.webassets-cache
+
+# Database
+*.sqlite3
+*.db
+
+# Migrations (if you add Flask-Migrate later)
+migrations/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Testing / coverage
+.coverage
+htmlcov/
+
+# Build / distribution
+build/
+dist/
+*.egg-info/
+
