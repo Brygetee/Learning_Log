@@ -6,13 +6,14 @@
 </head>
 <body>
     <form>
+        <p>All fields are required.</p>
         <label for="title">Title/ Main Concept:</label>
         <input type="text" id="title" name="title" required>
 
         <br>
 
         <label for="subject">Subject:</label>
-        <select name="subject" id="subject">
+        <select name="subject" id="subject" required>
             {% for s in subjects %}
                 <option value="{{s}}">{{s}}</option>
             {% endfor %}
@@ -22,25 +23,25 @@
 
         <label for="concepts_learned">Concepts Learned</label>
         <br>
-        <textarea id="concepts_learned" name="concepts_learned" rows="10" cols="50"></textarea>
+        <textarea id="concepts_learned" name="concepts_learned" rows="10" cols="50" required aria-required="true"></textarea>
 
         <br>
 
         <label for="reference_notes">Reference Notes</label>
         <br>
-        <textarea id="reference_notes" name="reference_notes" rows="10" cols="50"></textarea>
+        <textarea id="reference_notes" name="reference_notes" rows="10" cols="50" required aria-required="true"></textarea>
 
         <br>
         <label for="key_takeaways">Key Takeaways</label>
         <br>
-        <textarea id="key_takeaways" name="key_takeaways" rows="10" cols="50"></textarea>
+        <textarea id="key_takeaways" name="key_takeaways" rows="10" cols="50" required aria-required="true"></textarea>
         <br>
 
 
         <fieldset class="date">
 
             <legend>Date</legend>
-                <input type="date" id="date" name="date">
+                <input type="date" id="date" name="date" required>
        </fieldset>
 
         <button type="submit">Save Entry</button>
