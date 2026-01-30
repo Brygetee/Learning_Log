@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My entries</title>
+</head>
+<body>
+All the entries go here: <br>
+{% for i in info %}
+<!--for each item in list, retrieve each key and pair-->
+
+    subject is: {{i.subject}} <br>
+    title is: {{i.title}}<br>
+    concepts learned: {{i.concepts_learned}}<br>
+    reference notes: {{i.reference_notes}}<br>
+    key takeaways: {{i.key_takeaways}}<br>
+    date: {{i.date}}<br>
+
+
+
+{% endfor %}
+</body>
+</html>
